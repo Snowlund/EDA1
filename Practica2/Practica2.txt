@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main(void) {
+    int a[5] = {2, 4, 6, 8, 10}; // Se declara un arreglo de 5 enteros con valores iniciales
+    int *p = a;                  // Se declara un puntero p que apunta al primer elemento del arreglo (a[0])
+
+    printf("1) a[1] = %d\n", a[1]);      
+    // Imprime el valor del segundo elemento del arreglo (a[1] = 4)
+
+    printf("2) *(a+3) = %d\n", *(a+3));  
+    // Usa aritmética de punteros: a+3 apunta a a[3], por lo tanto imprime 8
+
+    printf("3) *p++ = %d\n", *p++);      
+    // Usa el operador post-incremento:
+    //   - Primero evalúa *p (p apunta a a[0], que vale 2)
+    //   - Luego incrementa p, ahora p apunta a a[1]
+
+    printf("4) *++p = %d\n", *++p);      
+    // Usa el operador pre-incremento:
+    //   - Primero incrementa p (estaba en a[1], ahora apunta a a[2])
+    //   - Luego imprime el valor en esa posición (a[2] = 6)
+
+    printf("5) p[1] = %d\n", p[1]);      
+    // Accede al elemento siguiente al que apunta p (p apunta a a[2], así que p[1] = a[3] = 8)
+
+    printf("6) *(p+=2) = %d\n", *(p+=2)); 
+    // p se mueve 2 posiciones adelante:
+    //   - p estaba en a[2], ahora apunta a a[4]
+    //   - Imprime *(p) = a[4] = 10
+
+    printf("7) p - a = %ld\n", p - a);    
+    // Resta direcciones de memoria:
+    //   - p apunta a a[4], a apunta a a[0]
+    //   - Diferencia = 4 posiciones (índice)
+    //   - Imprime 4
+
+    return 0;
+}
+
+
+    // Imprime el nuevo valor de x y el contenido apuntado por p
+    printf("6) x = %d, *p = %d\n", x, *p); // Ambos muestran 42
+
+    return 0;  
+}
