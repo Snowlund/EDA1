@@ -1,0 +1,4 @@
+¿Con qué operador accedes a los campos? → Con el operador punto (.) si es una variable directa, o flecha (->) si es un puntero.
+
+¿Qué es directores[2][20]? → Es un arreglo  de caracteres: permite guardar hasta 2 nombres de directores, cada uno de hasta 19 caracteres.
+¿Qué es videoteca[1]? → Es la segunda película en el arreglo de estructuras videoteca.
